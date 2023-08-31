@@ -17,7 +17,7 @@ export class EditBikeDialogComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
     private dialogRef: MatDialogRef<EditBikeDialogComponent>,
-    private store: BikeStoreService
+    private store: BikeStoreService,
   ) {
 
     if (data) {

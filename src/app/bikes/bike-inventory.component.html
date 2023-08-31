@@ -25,7 +25,8 @@
            style="width: 100%; height: 220px;
                                 margin-top: 10px; margin-bottom: 10px;
                                 object-fit: cover;">
-      <p>
+      <!--TODO: make directive for more... and only show tooltip if > 90 chars-->
+      <p [matTooltip]="bike?.description || 'No description provided'">
         {{bike.description?.substring(0, 90)}}
         <span *ngIf="bike.description?.length || 0 > 90">...</span>
       </p>
