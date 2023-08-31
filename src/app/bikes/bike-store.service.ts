@@ -66,7 +66,7 @@ export class BikeStoreService {
       bike.rating = 4;
       bike.price = 1000.00;
       bike.qty = 20;
-      bike.imageSrc = `https://i.pinimg.com/originals/70/84/f0/7084f0a11f7593ccee048d8d9476ea73.jpg`;
+      bike.imageSrc = `https://i.pinimg.com/originals/34/3c/f3/343cf35b5de9a1482aa35c99aa7090f1.jpg`;
     }
     return bike;
   }
