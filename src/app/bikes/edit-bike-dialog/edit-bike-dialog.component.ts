@@ -11,8 +11,8 @@ export enum BikeDialogMode { 'create', 'edit'};
   styleUrls: ['./edit-bike-dialog.component.scss']
 })
 export class EditBikeDialogComponent {
-  mode: BikeDialogMode = BikeDialogMode.create;
   bike!: IBike;
+  title = '';
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
@@ -21,7 +21,11 @@ export class EditBikeDialogComponent {
   ) {
 
     if (data) {
-      this.mode = data.mode || BikeDialogMode.create;
+
+      if (data.mode == BikeDialogMode.create)
+        this.title = 'Add bike';
+      else this.title = 'Edit bike';
+
       this.bike = data.bike || this.store.createBike();
     }
   }
