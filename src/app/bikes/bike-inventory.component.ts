@@ -7,10 +7,10 @@ import {EditBikeDialogComponent} from "./edit-bike-dialog/edit-bike-dialog.compo
 
 @Component({
   selector: 'app-inventory',
-  templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.css']
+  templateUrl: './bike-inventory.component.html',
+  styleUrls: ['./bike-inventory.component.css']
 })
-export class InventoryComponent {
+export class BikeInventoryComponent {
 
   bikes$: Observable<IBike[]>;
 
