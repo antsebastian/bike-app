@@ -8,7 +8,7 @@ import {EditBikeDialogComponent} from "./edit-bike-dialog/edit-bike-dialog.compo
 @Component({
   selector: 'app-inventory',
   templateUrl: './bike-inventory.component.html',
-  styleUrls: ['./bike-inventory.component.css']
+  styleUrls: ['./bike-inventory.component.scss']
 })
 export class BikeInventoryComponent {
 

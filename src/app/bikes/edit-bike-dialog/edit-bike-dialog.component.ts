@@ -8,7 +8,7 @@ export type BikeDialogMode = 'create' | 'edit'
 @Component({
   selector: 'app-edit-bike-dialog',
   templateUrl: './edit-bike-dialog.component.html',
-  styleUrls: ['./edit-bike-dialog.component.css']
+  styleUrls: ['./edit-bike-dialog.component.scss']
 })
 export class EditBikeDialogComponent {
   mode: BikeDialogMode = 'create';
