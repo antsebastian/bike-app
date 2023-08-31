@@ -13,12 +13,12 @@
       <div style="display: flex; flex-flow: row; align-items: start; width: 100%">
         <div style="display: flex; flex-flow: column; align-items: start">
           <h2 style="margin: 0; line-height: 1em">{{bike.model}}</h2>
-          <h5 style="margin: 4px 0 0;line-height: 1em; color: #222222">{{bike.qty}} in stock</h5>
+          <h5 style="margin: 4px 0 0;line-height: 1em; color: #222222">{{bike.qty || 0}} in stock</h5>
         </div>
         <span style="flex: 1 1 auto"></span>
         <div style="display: flex; flex-flow: column; align-items: end">
           <h2 style="margin: 0; line-height: 1em">{{bike.price | currency}}</h2>
-          <h5 style="margin: 4px 0 0; line-height: 1em; color: #222222">{{bike.rating}} stars</h5>
+          <h5 *ngIf="bike.rating" style="margin: 4px 0 0; line-height: 1em; color: #222222">{{bike.rating}} stars</h5>
         </div>
       </div>
       <img [alt]="bike.imageSrc" [src]="bike.imageSrc"
@@ -27,7 +27,7 @@
                                 margin-top: 10px; margin-bottom: 10px;
                                 object-fit: cover;">
       <!--TODO: make directive for more... and only show tooltip if > 90 chars-->
-      <p [matTooltip]="bike?.description || 'No description provided'">
+      <p [matTooltip]="bike?.description || 'No description provided'" style="height: 40px;">
         {{bike.description?.substring(0, 90)}}
         <span *ngIf="(bike.description?.length || 0) > 90">...</span>
       </p>
