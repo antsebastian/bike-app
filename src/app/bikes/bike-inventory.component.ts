@@ -25,13 +25,10 @@ export class BikeInventoryComponent {
         mode: 'create',
       }
     });
-    //  const snack = this.snackBar.open('Snack bar open before dialog');
 
     dialogRef.afterClosed().subscribe((bike: IBike) => {
       if (bike) {
         this.store.addBike(bike);
-      } else {
-        console.log('cancelled');
       }
     });
   }
@@ -43,13 +40,10 @@ export class BikeInventoryComponent {
         bike: {...bike}
       }
     });
-    //  const snack = this.snackBar.open('Snack bar open before dialog');
 
     dialogRef.afterClosed().subscribe((bike: IBike) => {
       if (bike) {
         this.store.updateBike(bike);
-      } else {
-        console.log('cancelled');
       }
     });
   }
