@@ -1,0 +1,41 @@
+<form #bikeForm="ngForm">
+  <mat-form-field>
+    <mat-label>Model</mat-label>
+    <input [(ngModel)]="bike.model" matInput name="model"
+           placeholder="Ex. Eahora 250A" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea [(ngModel)]="bike.description" matInput
+              name="description" placeholder="Ex. 750 watts of power"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rating</mat-label>
+    <input [(ngModel)]="bike.rating" matInput name="rating"
+           placeholder="1-5" type="numeric"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input [(ngModel)]="bike.price" matInput
+           name="price" placeholder="Ex. $1000.00"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Quantity</mat-label>
+    <input [(ngModel)]="bike.qty" matInput
+           name="qty" placeholder="Number in stock"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <input [(ngModel)]="bike.type" matInput
+           name="type" placeholder="Electric or Manual"/>
+  </mat-form-field>
+</form>
+
+
+<button (click)="onCancel()" mat-flat-button>Cancel</button>
+<button (click)="onOK()" color="primary" mat-raised-button>OK</button>

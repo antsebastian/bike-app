@@ -1,0 +1,44 @@
+<mat-toolbar>
+  <button (click)="addBike()" mat-flat-button>Add a Bike</button>
+</mat-toolbar>
+
+<ng-container *ngIf="bikes$ | async as bikes">
+  <div style="display: flex; flex-flow: row wrap; gap:10px; margin:10px">
+    <div *ngFor="let bike of bikes" class="mat-elevation-z2" style="width:400px; padding: 10px;
+                                        border: solid 1px lightgray; border-radius: 10px;">
+      <div style="display: flex; flex-flow: row; align-items: start; width: 100%">
+        <div style="display: flex; flex-flow: column; align-items: start">
+          <h2 style="margin: 0; line-height: 1em">{{bike.model}}</h2>
+          <h5 style="margin: 4px 0 0;line-height: 1em; color: #222222">{{bike.qty}} in stock</h5>
+        </div>
+        <span style="flex: 1 1 auto"></span>
+        <div style="display: flex; flex-flow: column; align-items: end">
+          <h2 style="margin: 0; line-height: 1em">{{bike.price | currency}}</h2>
+          <h5 style="margin: 4px 0 0; line-height: 1em; color: #222222">{{bike.rating}} stars</h5>
+        </div>
+      </div>
+
+      <img alt="Photo of a Shiba Inu" class="image"
+           src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+           style="width: 100%; height: 220px;
+                                margin-top: 10px; margin-bottom: 10px;
+                                object-fit: cover;">
+      <p>
+        {{bike.description?.substring(0, 90)}}
+        <span *ngIf="bike.description?.length || 0 > 90">...</span>
+      </p>
+      <div style="width: 100%; display:flex; flex-flow: row; align-items: end">
+        <span style="flex:1 1 auto"></span>
+        <button (click)="onEditBike(bike)" aria-label="Edit bike" color="primary" mat-icon-button
+                matTooltip="Edit bike">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="onRemoveBike(bike)" aria-label="Delete bike" color="warn" mat-icon-button
+                matTooltip="Delete bike">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
