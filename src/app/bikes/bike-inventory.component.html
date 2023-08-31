@@ -20,9 +20,8 @@
           <h5 style="margin: 4px 0 0; line-height: 1em; color: #222222">{{bike.rating}} stars</h5>
         </div>
       </div>
-
-      <img alt="Photo of a Shiba Inu" class="image"
-           src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      <img [src]="bike.imageSrc" alt="{{bike.imageSrc}}"
+           class="image"
            style="width: 100%; height: 220px;
                                 margin-top: 10px; margin-bottom: 10px;
                                 object-fit: cover;">

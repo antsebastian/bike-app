@@ -1,7 +1,3 @@
-export enum BikeType {
-  electronic,
-  manual
-};
 
 export interface IBike {
   id?: number;
@@ -10,7 +6,6 @@ export interface IBike {
   rating?: number;
   price?: number;
   qty?: number;
-  type?: BikeType;
   imageSrc?: string;
 }
 
@@ -21,7 +16,6 @@ export class Bike implements IBike {
   rating?: number;
   price?: number;
   qty?: number;
-  type?: BikeType;
   imageSrc?: string;
 
   constructor(a: Partial<Bike> = {}) {
@@ -31,6 +25,7 @@ export class Bike implements IBike {
     this.rating = a.rating;
     this.price = a.price;
     this.qty = a.qty;
-    this.type = a.type;
+    this.imageSrc = a.imageSrc;
+
   }
 }

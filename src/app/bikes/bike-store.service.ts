@@ -1,6 +1,6 @@
 import {Injectable, isDevMode} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
-import {Bike, BikeType, IBike} from "./bike.model";
+import {Bike, IBike} from "./bike.model";
 
 @Injectable({
   providedIn: 'root'
@@ -66,7 +66,7 @@ export class BikeStoreService {
       bike.rating = 4;
       bike.price = 1000.00;
       bike.qty = 20;
-      bike.type = BikeType.electronic;
+      bike.imageSrc = `https://i.pinimg.com/originals/70/84/f0/7084f0a11f7593ccee048d8d9476ea73.jpg`;
     }
     return bike;
   }

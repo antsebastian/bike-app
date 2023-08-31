@@ -24,7 +24,7 @@
       <mat-form-field>
         <mat-label>Price</mat-label>
         <input [(ngModel)]="bike.price" matInput
-               name="price" placeholder="Ex. $1000.00"/>
+               name="price" placeholder="Ex. 1000.00"/>
       </mat-form-field>
 
       <mat-form-field>
@@ -34,10 +34,11 @@
       </mat-form-field>
 
       <mat-form-field>
-        <mat-label>Type</mat-label>
-        <input [(ngModel)]="bike.type" matInput
-               name="type" placeholder="Electric or Manual"/>
+        <mat-label>Image Source</mat-label>
+        <input [(ngModel)]="bike.imageSrc" matInput
+               name="type" placeholder="http://www.website.com/my.jpg"/>
       </mat-form-field>
+
     </div>
   </form>
 </mat-dialog-content>
