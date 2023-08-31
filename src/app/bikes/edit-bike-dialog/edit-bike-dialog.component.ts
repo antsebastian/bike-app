@@ -3,7 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {IBike} from "../bike.model";
 import {BikeStoreService} from "../bike-store.service";
 
-export type BikeDialogMode = 'create' | 'edit'
+export enum BikeDialogMode { 'create', 'edit'};
 
 @Component({
   selector: 'app-edit-bike-dialog',
@@ -11,7 +11,7 @@ export type BikeDialogMode = 'create' | 'edit'
   styleUrls: ['./edit-bike-dialog.component.scss']
 })
 export class EditBikeDialogComponent {
-  mode: BikeDialogMode = 'create';
+  mode: BikeDialogMode = BikeDialogMode.create;
   bike!: IBike;
 
   constructor(
@@ -21,7 +21,7 @@ export class EditBikeDialogComponent {
   ) {
 
     if (data) {
-      this.mode = data.mode || 'create';
+      this.mode = data.mode || BikeDialogMode.create;
       this.bike = data.bike || this.store.createBike();
     }
   }

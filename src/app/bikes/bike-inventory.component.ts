@@ -3,7 +3,7 @@ import {BikeStoreService} from "./bike-store.service";
 import {Observable} from "rxjs";
 import {IBike} from "./bike.model";
 import {MatDialog} from "@angular/material/dialog";
-import {EditBikeDialogComponent} from "./edit-bike-dialog/edit-bike-dialog.component";
+import {BikeDialogMode, EditBikeDialogComponent} from "./edit-bike-dialog/edit-bike-dialog.component";
 
 @Component({
   selector: 'app-inventory',
@@ -19,10 +19,10 @@ export class BikeInventoryComponent {
     this.bikes$ = store.bikes$;
   }
 
-  addBike() {
+  onAddBike() {
     const dialogRef = this.editDialog.open(EditBikeDialogComponent, {
       data: {
-        mode: 'create',
+        mode: BikeDialogMode.create,
       }
     });
 
@@ -36,7 +36,7 @@ export class BikeInventoryComponent {
   onEditBike(bike: IBike) {
     const dialogRef = this.editDialog.open(EditBikeDialogComponent, {
       data: {
-        mode: 'edit',
+        mode: BikeDialogMode.edit,
         bike: {...bike}
       }
     });
