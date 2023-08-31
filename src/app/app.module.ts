@@ -27,6 +27,7 @@ const routes: Routes = [
     path: 'bike-inventory',
     component: BikeInventoryComponent
   }
+  // TODO: Add error paths
 ];
 
 @NgModule({

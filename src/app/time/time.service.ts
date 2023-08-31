@@ -11,7 +11,7 @@ export class TimeService {
   }
 
   getDate(): Observable<Date> {
-    const getter$ = this.http.get<any>('http://worldtimeapi.org/api/timezone/America/New_York')
+    const getter$ = this.http.get<any>('http://worldtimeapi.org/api/timezone/America/Los_Angeles')
       .pipe(map(ret => new Date(ret.datetime)));
 
     //update every minute
