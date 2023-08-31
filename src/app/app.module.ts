@@ -15,15 +15,16 @@ import {CommonModule} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'inventory'
+    redirectTo: 'bike-inventory'
   },
   {
-    path: 'inventory',
+    path: 'bike-inventory',
     component: BikeInventoryComponent
   }
 ];
@@ -50,7 +51,8 @@ const routes: Routes = [
     FormsModule,
     MatFormFieldModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

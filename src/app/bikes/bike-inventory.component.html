@@ -1,5 +1,8 @@
-<mat-toolbar>
+<mat-toolbar style="display: flex; flex-flow: row">
   <button (click)="onAddBike()" mat-flat-button>Add a Bike</button>
+  <span style="flex:1 1 auto"></span>
+  {{date$ | async | date: 'medium'}}
+
 </mat-toolbar>
 
 <ng-container *ngIf="bikes$ | async as bikes">
