@@ -68,6 +68,6 @@ export class BikeStoreService {
       bike.qty = 20;
       bike.type = BikeType.electronic;
     }
-    return new Bike();
+    return bike;
   }
 }
