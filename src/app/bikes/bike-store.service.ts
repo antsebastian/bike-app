@@ -59,6 +59,7 @@ export class BikeStoreService {
 
   createBike(): IBike {
     const bike = new Bike();
+    //TODO: make this check in app.module, use an abstract factory provider and create a mock service for mock data.
     if (isDevMode()) {
       bike.model = 'Eahora 250A';
       bike.description = `Lorem ipsum dolor sit amet, quo id altera minimum appareat. Sale volumus periculis cum no, viderer reprimique pro an. An agam invenire constituam ius, duo stet cibo prompta ea, ne brute noluisse nec. Vim molestie interesset in, vim inimicus aliquando ex. Ut propriae percipit est. An nisl nominavi reprimique mel.`;
