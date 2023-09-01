@@ -16,6 +16,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {HttpClientModule} from "@angular/common/http";
+import {RatingComponent} from './components/rating/rating.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     BikeInventoryComponent,
-    EditBikeDialogComponent
+    EditBikeDialogComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

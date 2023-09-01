@@ -18,7 +18,8 @@
         <span style="flex: 1 1 auto"></span>
         <div style="display: flex; flex-flow: column; align-items: end">
           <h2 style="margin: 0; line-height: 1em">{{bike.price | currency}}</h2>
-          <h5 *ngIf="bike.rating" style="margin: 4px 0 0; line-height: 1em; color: #222222">{{bike.rating}} stars</h5>
+          <app-rating *ngIf="bike.rating" [rating]="bike.rating"
+                      style="transform-origin: top right; transform: scale(0.8, 0.8)"></app-rating>
         </div>
       </div>
       <img [alt]="bike.imageSrc" [src]="bike.imageSrc"
